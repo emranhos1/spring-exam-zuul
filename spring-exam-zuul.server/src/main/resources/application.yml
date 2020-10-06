@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: zuulserver
+zuul:
+  routes:
+    api:
+      path: /api/**
+      url: http://localhost:9191/
+    static:
+      path: /**
+      url: http://localhost:1841/
+server:
+  port: 8111
