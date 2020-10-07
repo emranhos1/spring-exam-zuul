@@ -1,11 +1,19 @@
 server:
   port: 9191
 ## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+#PHPMyAdmin Config
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/spring_zuul_exam
+    url: jdbc:mysql://localhost:3306/spring_zuul_exam?autoReconnect=true&useSSL=false
     username: root
     password:
+
+##MySQL Config
+#spring:
+  #datasource:
+    #url: jdbc:mysql://localhost:3306/spring_zuul_exam?autoReconnect=true&useSSL=false
+    #username: root
+    #password: root
 
 ## Hibernate Properties
 # The SQL dialect makes Hibernate generate better SQL for the chosen database
