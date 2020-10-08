@@ -1,7 +1,11 @@
 package com.eh.webapi;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.eh.webapi.util.Massages;
 /**
  * @author Md. Emran Hossain<emranhos1@gmail.com>
  * @version   1.0.00.EH
@@ -10,7 +14,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class MainApplication {
 
+    private static Logger LOG = LoggerFactory.getLogger(MainApplication.class);
+
     public static void main(String[] args) {
         SpringApplication.run(MainApplication.class, args);
+        LOG.info("START UP MASSAGE :: {} {}", Massages.WELCOME, Massages.STARTING_MASSAGE);
     }
 }

@@ -28,4 +28,9 @@ public class T02003ServiceImpl implements T02003Service{
     public Long searchCountAllNationality() {
         return t02003Repository.count();
     }
+
+    @Override
+    public T02003 searchNationalityByCode(String code) {
+        return t02003Repository.findByNationalityCode(code);
+    }
 }

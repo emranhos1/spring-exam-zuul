@@ -12,4 +12,5 @@ import com.eh.webapi.model.T02003;
 @Repository
 public interface T02003Repository extends JpaRepository<T02003, Integer>{
 
+    T02003 findByNationalityCode(String code);
 }

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.eh.webapi.util.OffsetUtill;
 
 @RestController
-@RequestMapping("/v.0.1/rest/api")
+@RequestMapping("/")
 public class DefultController {
 
     @GetMapping

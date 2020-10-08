@@ -11,5 +11,7 @@ import com.eh.webapi.model.T02003;
 public interface T02003Service {
 
     List<T02003> searchAllNationality();
+    T02003 searchNationalityByCode(String code);
+
     Long searchCountAllNationality();
 }

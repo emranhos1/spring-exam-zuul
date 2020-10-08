@@ -13,8 +13,8 @@ public class Massages {
     public static final String RESPONSE_MASSAGE_TRUE = "Records Found";
     public static final String RESPONSE_MASSAGE_FALSE = "No Records Found";
 
-    public static final String WELCOME = "Welcome To Internet Cable Billing System";
-    public static final String STARTING_MASSAGE = "API Can Now accessible";
+    public static final String WELCOME = "Welcome !!!";
+    public static final String STARTING_MASSAGE = "Check API...";
 
     public static String welcome() {
         return WELCOME;
