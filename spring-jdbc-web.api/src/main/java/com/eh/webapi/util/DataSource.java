@@ -5,6 +5,7 @@ import java.util.List;
 import com.mysql.jdbc.Driver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.SimpleDriverDataSource;
@@ -57,6 +58,8 @@ public class DataSource {
         Object object = null;
         try {
             object = getJdbcTemplate().queryForObject(sql, params, new BeanPropertyRowMapper(modelClass));
+        } catch (EmptyResultDataAccessException e) {
+            return null;
         } catch (Exception e) {
             LOG.error("Exception From DataSource selectOne Method : {}", e);
         }
@@ -68,6 +71,8 @@ public class DataSource {
         List list = null;
         try {
             list = getJdbcTemplate().query(sql, params, new BeanPropertyRowMapper(modelClass));
+        } catch (EmptyResultDataAccessException e) {
+            return null;
         } catch (Exception e) {
             LOG.error("Exception From DataSource selectList Method : {}", e);
         }
