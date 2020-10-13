@@ -27,12 +27,12 @@ public class T02003 {
     @Id
     @Column(name = "nationality_code")
     private String nationalityCode;
-    @Column(name = "lang1_name")
+    @Column(name = "name_native")
     private String nameNative;
-    @Column(name = "lang2_name")
+    @Column(name = "name_global")
     private String nameGlobal;
     @Column(name = "short_name")
-    private String nameShrt;
+    private String shortName;
 
     public Date getAmendDate() {
         return amendDate;
@@ -90,11 +90,11 @@ public class T02003 {
         this.nameGlobal = nameGlobal;
     }
 
-    public String getNameShrt() {
-        return nameShrt;
+    public String getShortName() {
+        return shortName;
     }
 
-    public void setNameShrt(String nameShrt) {
-        this.nameShrt = nameShrt;
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
     }
 }
