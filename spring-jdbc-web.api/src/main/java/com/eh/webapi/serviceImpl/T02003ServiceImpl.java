@@ -43,12 +43,12 @@ public class T02003ServiceImpl implements T02003Service{
         if(!ObjectUtils.isEmpty(hasNationality)) {
             dataSource.insert(
                     SQLProperty.UPDATE_NATIONALITY, 
-                    new Object[]{ new Date(), t02003.getAmendUser(), t02003.getNameNative(), t02003.getNameGlobal(), t02003.getNameShrt(), t02003.getNationalityCode()}
+                    new Object[]{ new Date(), t02003.getAmendUser(), t02003.getNameNative(), t02003.getNameGlobal(), t02003.getShortName(), t02003.getNationalityCode()}
                 );
         } else {
             dataSource.insert(
                     SQLProperty.CREATE_NATIONALITY, 
-                    new Object[]{ t02003.getNationalityCode(), new Date(), "SELF", t02003.getNameNative(), t02003.getNameGlobal(), t02003.getNameShrt()}
+                    new Object[]{ t02003.getNationalityCode(), new Date(), "SELF", t02003.getNameNative(), t02003.getNameGlobal(), t02003.getShortName()}
                 );
         }
     }

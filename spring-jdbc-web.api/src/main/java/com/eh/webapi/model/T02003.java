@@ -16,7 +16,7 @@ public class T02003 {
     private String nationalityCode;
     private String nameNative;
     private String nameGlobal;
-    private String nameShrt;
+    private String shortName;
 
     public Date getAmendDate() {
         return amendDate;
@@ -74,11 +74,11 @@ public class T02003 {
         this.nameGlobal = nameGlobal;
     }
 
-    public String getNameShrt() {
-        return nameShrt;
+    public String getShortName() {
+        return shortName;
     }
 
-    public void setNameShrt(String nameShrt) {
-        this.nameShrt = nameShrt;
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
     }
 }

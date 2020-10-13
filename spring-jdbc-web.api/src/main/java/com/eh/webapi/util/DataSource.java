@@ -17,7 +17,7 @@ public class DataSource {
 
     private static Logger LOG = LoggerFactory.getLogger(DataSource.class);
 
-    private final String URL = "jdbc:mysql://localhost:3307/";
+    private final String URL = "jdbc:mysql://localhost:3306/";
     private final String SCHEMA = "spring_zuul_exam";
     private final String USER_NAME = "root";
     private final String PASSWORD = "";
