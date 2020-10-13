@@ -2,7 +2,7 @@ package com.eh.webapi.util;
 
 import java.util.List;
 
-import org.gjt.mm.mysql.Driver;
+import com.mysql.jdbc.Driver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
